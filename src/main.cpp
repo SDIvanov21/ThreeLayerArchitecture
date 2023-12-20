@@ -13,20 +13,7 @@ int main() {
     do {
         presentationLayer.DisplayMenu();
         choice = presentationLayer.GetUserChoice("Enter your choice: ");
-        switch (businessLogicLayer.ProcessUserInput(choice))
-        {
-        case 1:
-            presentationLayer.Print("Sign up successful!\n");
-            break;
-        case 2:
-            presentationLayer.Print("Account already exists!\n");
-            break;
-        case 3:
-            presentationLayer.Print("Exiting...\n");
-            break;
-        case 4:
-            presentationLayer.Print("Invalid choice. Please try again.\n");
-        }
+        businessLogicLayer.ProcessUserInput(choice);
 
     } while (choice != 2);
 

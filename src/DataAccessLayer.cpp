@@ -4,7 +4,7 @@
 #include <sstream>
 
 bool DataAccessLayer::DoesAccountExist(const std::string& username) {
-    std::ifstream file("accounts.csv");
+    std::ifstream file("./data/accounts.csv");
     std::string line;
     while (std::getline(file, line)) {
         std::istringstream iss(line);
@@ -18,7 +18,7 @@ bool DataAccessLayer::DoesAccountExist(const std::string& username) {
     return false; // Account not found
 }
 
-void DataAccessLayer::AddAccount(const std::string& username) {
-    std::ofstream file("accounts.csv", std::ios_base::app);
-    file << username << "\n";
+void DataAccessLayer::AddAccount(const std::string& username, const std::string& password) {
+    std::ofstream file("./data/accounts.csv", std::ios_base::app);
+    file << username << ',' << password << "\n";
 }

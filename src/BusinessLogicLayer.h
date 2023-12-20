@@ -7,8 +7,8 @@
 
 class BusinessLogicLayer {
 public:
-    int ProcessUserInput(int choice);
-    bool SignUp(const std::string& username);
+    void ProcessUserInput(int choice);
+    bool SignUp(const std::string& username, const std::string& password);
 
     PresentationLayer* presLayer;
     DataAccessLayer* dataLayer;

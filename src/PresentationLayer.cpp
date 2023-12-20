@@ -22,7 +22,7 @@ int PresentationLayer::GetUserChoice(const std::string& prompt) {
     return userInput[0] - 48;
 }
 
-std::string PresentationLayer::GetUsername(const std::string& prompt) {
+std::string PresentationLayer::GetUserData(const std::string& prompt) {
     std::string userInput;
 
     std::cout << prompt;
